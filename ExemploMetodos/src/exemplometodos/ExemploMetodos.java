@@ -5,6 +5,8 @@
  */
 package exemplometodos;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author robso
@@ -17,24 +19,42 @@ public class ExemploMetodos {
     public static void main(String[] args) {
         metodoA();
         int resultado = metodoB();
-        System.out.println("Saída do método B:" +resultado);
+        System.out.println("Saída do método B: " +resultado);
+        JOptionPane.showMessageDialog(null, metodoC());
         
        
     }
     
         static void metodoA(){
-            int a = 15;
-            int b = 10;
+            int a = Integer.parseInt(JOptionPane.showInputDialog("Digite A: "));
+            int b = Integer.parseInt(JOptionPane.showInputDialog("Digite B: "));
             int soma = a + b;
             System.out.println("Saéda do método A: "+soma);
+            JOptionPane.showMessageDialog(null,"Saída do método A: "+ soma);
           
       }  
         
         
         static int metodoB(){
-            int a = 10;
-            int b = 15;
-            return a + b;
+           int a = Integer.parseInt(JOptionPane.showInputDialog("Digite A: "));
+            int b = Integer.parseInt(JOptionPane.showInputDialog("Digite B: "));
+            int soma = a + b;
+            return soma;
+        } 
+        
+        static String metodoC(){
+            int a = Integer.parseInt(JOptionPane.showInputDialog("Digite A: "));
+            int b = Integer.parseInt(JOptionPane.showInputDialog("Digite B: "));
+            int soma = a + b;
+            if (soma % 2 == 0){
+                return "PAR";
+            }else{
+              return "IMPAR";  
+            }
+            
         }
-    
+        
+        
+        
+        
 }
