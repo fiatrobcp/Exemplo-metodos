@@ -22,6 +22,12 @@ public class ExemploMetodos {
         System.out.println("Saída do método B: " +resultado);
         JOptionPane.showMessageDialog(null, metodoC());
         
+        //execucao medo D
+        int x = 30;
+        int y = 50;
+        
+        JOptionPane.showMessageDialog(null, metodoD(x,y));
+        
        
     }
     
@@ -55,6 +61,10 @@ public class ExemploMetodos {
         }
         
         
+        static int metodoD(int a, int b){
+            
+            return  a+b;
+        }
         
         
 }
